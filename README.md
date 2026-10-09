@@ -179,23 +179,11 @@ The main assessment considerations include:
 * Mass conservation and numerical checks are essential when interpreting CFD results.
 * Comparing Fluent outputs with MATLAB post-processing helps connect numerical predictions with fluid-mechanics theory.
 
-## Repository Structure
+## Project Reports
 
-```text
-ANSYS-Fluent-Internal-Flow-Analysis/
-├── README.md
-├── report/
-│   ├── report-en.pdf
-│   └── report-fa.pdf
-├── Images/                          # Selected figures used in this README
-│   ├── 01_Elbow_*.jpg
-│   ├── 02_Diffuser_*.jpg
-│   └── 03_Nozzle_*.jpg
-├── matlab/
-│   ├── elbow/
-│   ├── diffuser/
-│   └── nozzle/
-└── results/
-    ├── elbow/
-    ├── diffuser/
-    └── nozzle/
+The accompanying reports document the problem definitions, computational procedures, flow-field visualizations, and engineering interpretations for the three studies.
+
+| Report | Description | File |
+|--------|-------------|------|
+| **English Portfolio Report** | Concise English edition summarizing methods, key results, and conclusions | [`reports/report-en.pdf`](reports/report-en.pdf) |
+| **Persian Course Report** | Full original report (Sharif University of Technology – Fluid Mechanics 1) | [`reports/report-fa.pdf`](reports/report-fa.pdf) |
