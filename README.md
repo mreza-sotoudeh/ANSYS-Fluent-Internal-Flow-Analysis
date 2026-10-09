@@ -41,16 +41,16 @@ The investigation considers both laminar and turbulent flow conditions, with Rey
 ### Geometry & Mesh
 
 <p align="center">
-  <img src="images/01_Elbow_RD2_mesh_view1.jpg" width="45%" alt="Elbow R/D=2 mesh">
-  <img src="images/01_Elbow_RD4_mesh_view1.jpg" width="45%" alt="Elbow R/D=4 mesh">
+  <img src="Images/01_Elbow_RD2_mesh_view1.jpg" width="45%" alt="Elbow R/D=2 mesh">
+  <img src="Images/01_Elbow_RD4_mesh_view1.jpg" width="45%" alt="Elbow R/D=4 mesh">
 </p>
 <p align="center"><em>Structured meshes for the 90° elbows with R/D = 2 (left) and R/D = 4 (right).</em></p>
 
 ### Velocity & Pressure Fields
 
 <p align="center">
-  <img src="images/01_Elbow_velocity_contour_MATLAB.jpg" width="45%" alt="Elbow velocity contour">
-  <img src="images/01_Elbow_pressure_contour_MATLAB.jpg" width="45%" alt="Elbow pressure contour">
+  <img src="Images/01_Elbow_velocity_contour_MATLAB.jpg" width="45%" alt="Elbow velocity contour">
+  <img src="Images/01_Elbow_pressure_contour_MATLAB.jpg" width="45%" alt="Elbow pressure contour">
 </p>
 <p align="center"><em>Velocity magnitude (left) and static-pressure (right) contours on the mid-plane (MATLAB post-processing).</em></p>
 
@@ -77,16 +77,16 @@ The second study investigates flow through a conical diffuser, where the cross-s
 ### Geometry & Mesh
 
 <p align="center">
-  <img src="images/02_Diffuser_geometry_schematic.jpg" width="40%" alt="Diffuser schematic">
-  <img src="images/02_Diffuser_mesh_3D.jpg" width="50%" alt="Diffuser mesh">
+  <img src="Images/02_Diffuser_geometry_schematic.jpg" width="40%" alt="Diffuser schematic">
+  <img src="Images/02_Diffuser_mesh_3D.jpg" width="50%" alt="Diffuser mesh">
 </p>
 <p align="center"><em>Schematic of the conical diffuser (left) and the structured 3-D mesh (right).</em></p>
 
 ### Velocity Contour & Streamlines
 
 <p align="center">
-  <img src="images/02_Diffuser_velocity_contour_MATLAB.jpg" width="45%" alt="Diffuser velocity contour">
-  <img src="images/02_Diffuser_streamlines_3D_side.jpg" width="50%" alt="Diffuser streamlines">
+  <img src="Images/02_Diffuser_velocity_contour_MATLAB.jpg" width="45%" alt="Diffuser velocity contour">
+  <img src="Images/02_Diffuser_streamlines_3D_side.jpg" width="50%" alt="Diffuser streamlines">
 </p>
 <p align="center"><em>Velocity contour showing core deceleration and near-wall recirculation (left) and 3-D streamlines (right).</em></p>
 
@@ -112,27 +112,27 @@ The third study examines a more complex flow domain combining a curved passage, 
 ### Geometry
 
 <p align="center">
-  <img src="images/03_Nozzle_geometry_with_dimensions.jpg" width="70%" alt="Nozzle geometry">
+  <img src="Images/03_Nozzle_geometry_with_dimensions.jpg" width="70%" alt="Nozzle geometry">
 </p>
 <p align="center"><em>Geometry and key dimensions of the converging–diverging nozzle with elbow and guide vanes.</em></p>
 
 ### Flow-Field Contours
 
 <p align="center">
-  <img src="images/03_Nozzle_velocity_contour_Fluent.jpg" width="45%" alt="Nozzle velocity">
-  <img src="images/03_Nozzle_pressure_contour.jpg" width="45%" alt="Nozzle pressure">
+  <img src="Images/03_Nozzle_velocity_contour_Fluent.jpg" width="45%" alt="Nozzle velocity">
+  <img src="Images/03_Nozzle_pressure_contour.jpg" width="45%" alt="Nozzle pressure">
 </p>
 <p align="center">
-  <img src="images/03_Nozzle_temperature_contour.jpg" width="45%" alt="Nozzle temperature">
-  <img src="images/03_Nozzle_density_contour.jpg" width="45%" alt="Nozzle density">
+  <img src="Images/03_Nozzle_temperature_contour.jpg" width="45%" alt="Nozzle temperature">
+  <img src="Images/03_Nozzle_density_contour.jpg" width="45%" alt="Nozzle density">
 </p>
 <p align="center"><em>Velocity, pressure, temperature and density contours of the coupled nozzle system.</em></p>
 
 ### Centerline Behavior & Mass Balance
 
 <p align="center">
-  <img src="images/03_Nozzle_pressure_polyline.jpg" width="45%" alt="Pressure along axis">
-  <img src="images/03_Nozzle_velocity_polyline.jpg" width="45%" alt="Velocity along axis">
+  <img src="Images/03_Nozzle_pressure_polyline.jpg" width="45%" alt="Pressure along axis">
+  <img src="Images/03_Nozzle_velocity_polyline.jpg" width="45%" alt="Velocity along axis">
 </p>
 <p align="center"><em>Centerline pressure and velocity distributions (peak velocity ≈ 3.6 m/s near the throat).</em></p>
 
@@ -187,7 +187,7 @@ ANSYS-Fluent-Internal-Flow-Analysis/
 ├── report/
 │   ├── report-en.pdf
 │   └── report-fa.pdf
-├── images/                          # Selected figures used in this README
+├── Images/                          # Selected figures used in this README
 │   ├── 01_Elbow_*.jpg
 │   ├── 02_Diffuser_*.jpg
 │   └── 03_Nozzle_*.jpg
