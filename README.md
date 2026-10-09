@@ -179,6 +179,13 @@ The main assessment considerations include:
 * Mass conservation and numerical checks are essential when interpreting CFD results.
 * Comparing Fluent outputs with MATLAB post-processing helps connect numerical predictions with fluid-mechanics theory.
 
+## MATLAB Scripts
+
+Post-processing scripts used to generate contours, profiles, and comparative plots:
+
+* **[Elbow](matlab/elbow)** — Velocity/pressure profiles and contours for the 90° elbows
+* **[Diffuser](matlab/diffuser)** — Velocity/pressure fields and recovery analysis for the 40° conical diffuser
+* **[Nozzle](matlab/nozzle)** — Velocity, pressure, temperature, density, and mass-flow post-processing for the converging–diverging nozzle system
 ## Project Reports
 
 The accompanying reports document the problem definitions, computational procedures, flow-field visualizations, and engineering interpretations for the three studies.
