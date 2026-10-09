@@ -1,5 +1,7 @@
 # ANSYS-Fluent-Internal-Flow-Analysis
+
 Performed CFD simulations of flow through curved ducts, a 40-degree conical diffuser, and a converging-diverging nozzle using ANSYS Fluent. Conducted mesh-independence studies and analyzed velocity distributions, pressure losses, and flow separation. MATLAB was used for plotting and comparison with theoretical results.
+
 # Computational Fluid Dynamics (CFD) Analysis of Internal Flows
 
 **Numerical investigation of internal-flow behavior in curved pipes, a conical diffuser, and a converging–diverging nozzle using ANSYS Fluent and MATLAB.**
@@ -15,7 +17,7 @@ The numerical investigation combines simulations in **ANSYS Fluent** with analyt
 | Study | Geometry                                              | Main objectives                                                                           |
 | ----- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | 1     | 90° pipe elbow                                        | Investigate velocity profiles, pressure variation, curvature effects, and pressure losses |
-| 2     | Conical diffuser                                      | Examine flow deceleration, pressure recovery, and possible flow separation                |
+| 2     | 40° conical diffuser                                  | Examine flow deceleration, pressure recovery, and possible flow separation                |
 | 3     | Elbow with guide vane and converging–diverging nozzle | Analyze velocity, pressure, temperature, density, and mass-flow behavior                  |
 
 ## Tools and Methods
@@ -28,11 +30,29 @@ The numerical investigation combines simulations in **ANSYS Fluent** with analyt
 * **Conservation checks** — Evaluation of mass-flow consistency
 * **Comparative analysis** — Examination of results obtained using different numerical approaches
 
+---
+
 ## 1. Flow Through a 90° Pipe Elbow
 
 The first study examines flow through a 90° elbow under different Reynolds numbers and curvature ratios.
 
 The investigation considers both laminar and turbulent flow conditions, with Reynolds numbers of 500 and 10,000, and compares elbow geometries with curvature ratios of \(R/D=2\) and \(R/D=4\).
+
+### Geometry & Mesh
+
+<p align="center">
+  <img src="images/01_Elbow_RD2_mesh_view1.jpg" width="45%" alt="Elbow R/D=2 mesh">
+  <img src="images/01_Elbow_RD4_mesh_view1.jpg" width="45%" alt="Elbow R/D=4 mesh">
+</p>
+<p align="center"><em>Structured meshes for the 90° elbows with R/D = 2 (left) and R/D = 4 (right).</em></p>
+
+### Velocity & Pressure Fields
+
+<p align="center">
+  <img src="images/01_Elbow_velocity_contour_MATLAB.jpg" width="45%" alt="Elbow velocity contour">
+  <img src="images/01_Elbow_pressure_contour_MATLAB.jpg" width="45%" alt="Elbow pressure contour">
+</p>
+<p align="center"><em>Velocity magnitude (left) and static-pressure (right) contours on the mid-plane (MATLAB post-processing).</em></p>
 
 ### Objectives
 
@@ -48,11 +68,27 @@ Flow turning introduces centrifugal effects and modifies the velocity distributi
 
 The comparison between different curvature ratios helps illustrate the relationship between geometry and internal-flow behavior.
 
-## 2. Flow Through a Conical Diffuser
+---
 
-The second study investigates flow through a conical diffuser, where the cross-sectional area increases in the streamwise direction.
+## 2. Flow Through a 40° Conical Diffuser
 
-The main objective is to understand the interaction between flow deceleration, static-pressure recovery, and viscous losses.
+The second study investigates flow through a conical diffuser, where the cross-sectional area increases in the streamwise direction (inlet diameter 0.08 m → outlet diameter 0.16 m, included angle 40°).
+
+### Geometry & Mesh
+
+<p align="center">
+  <img src="images/02_Diffuser_geometry_schematic.jpg" width="40%" alt="Diffuser schematic">
+  <img src="images/02_Diffuser_mesh_3D.jpg" width="50%" alt="Diffuser mesh">
+</p>
+<p align="center"><em>Schematic of the conical diffuser (left) and the structured 3-D mesh (right).</em></p>
+
+### Velocity Contour & Streamlines
+
+<p align="center">
+  <img src="images/02_Diffuser_velocity_contour_MATLAB.jpg" width="45%" alt="Diffuser velocity contour">
+  <img src="images/02_Diffuser_streamlines_3D_side.jpg" width="50%" alt="Diffuser streamlines">
+</p>
+<p align="center"><em>Velocity contour showing core deceleration and near-wall recirculation (left) and 3-D streamlines (right).</em></p>
 
 ### Objectives
 
@@ -65,15 +101,40 @@ The main objective is to understand the interaction between flow deceleration, s
 
 ### Key Physical Phenomena
 
-As the flow passes through an expanding duct, its mean velocity decreases and static pressure may recover. However, the adverse pressure gradient can cause boundary-layer thickening or separation, depending on the diffuser geometry and inlet-flow conditions.
+As the flow passes through an expanding duct, its mean velocity decreases and static pressure may recover. However, the adverse pressure gradient can cause boundary-layer thickening or separation, depending on the diffuser geometry and inlet-flow conditions. The obtained pressure-recovery coefficient \(C_r \approx 0.576\) lies within the expected empirical range for a 40° diffuser with strong separation.
 
-These effects can reduce pressure recovery and increase irreversible energy losses.
+---
 
 ## 3. Elbow–Guide-Vane–Converging–Diverging Nozzle System
 
-The third study examines a more complex flow domain combining a curved passage, a guide vane, and a converging–diverging nozzle.
+The third study examines a more complex flow domain combining a curved passage, a guide vane, and a converging–diverging nozzle. Air enters at 0.8 m/s and 600 K; walls are held at 250 K. Density varies with temperature.
 
-In addition to the velocity and pressure fields, the analysis considers thermal and density variations.
+### Geometry
+
+<p align="center">
+  <img src="images/03_Nozzle_geometry_with_dimensions.jpg" width="70%" alt="Nozzle geometry">
+</p>
+<p align="center"><em>Geometry and key dimensions of the converging–diverging nozzle with elbow and guide vanes.</em></p>
+
+### Flow-Field Contours
+
+<p align="center">
+  <img src="images/03_Nozzle_velocity_contour_Fluent.jpg" width="45%" alt="Nozzle velocity">
+  <img src="images/03_Nozzle_pressure_contour.jpg" width="45%" alt="Nozzle pressure">
+</p>
+<p align="center">
+  <img src="images/03_Nozzle_temperature_contour.jpg" width="45%" alt="Nozzle temperature">
+  <img src="images/03_Nozzle_density_contour.jpg" width="45%" alt="Nozzle density">
+</p>
+<p align="center"><em>Velocity, pressure, temperature and density contours of the coupled nozzle system.</em></p>
+
+### Centerline Behavior & Mass Balance
+
+<p align="center">
+  <img src="images/03_Nozzle_pressure_polyline.jpg" width="45%" alt="Pressure along axis">
+  <img src="images/03_Nozzle_velocity_polyline.jpg" width="45%" alt="Velocity along axis">
+</p>
+<p align="center"><em>Centerline pressure and velocity distributions (peak velocity ≈ 3.6 m/s near the throat).</em></p>
 
 ### Objectives
 
@@ -85,19 +146,17 @@ In addition to the velocity and pressure fields, the analysis considers thermal 
 * Evaluate mass-flow rates at the inlet and outlets.
 * Check mass conservation and assess the guide-vane outlet flow.
 
-### Post-Processing
-
-MATLAB is used to process selected numerical data and generate comparative plots. The resulting velocity, pressure, temperature, and density distributions provide complementary views of the flow field and help identify the effects of geometry and boundary conditions.
-
 ### Mass Conservation
 
 The mass-flow balance is evaluated by comparing the inlet mass flow rate with the sum of the outlet mass flow rates:
 
 $$
-\sum \dot{m}_{\mathrm{in}}-\sum \dot{m}_{\mathrm{out}}\approx 0
+\sum \dot{m}_{\mathrm{in}} - \sum \dot{m}_{\mathrm{out}} \approx 0
 $$
 
-A small imbalance supports the numerical consistency of the converged solution, although it does not by itself establish mesh independence or physical accuracy.
+A small imbalance (on the order of 1.7 g/s) supports the numerical consistency of the converged solution.
+
+---
 
 ## Numerical Analysis and Validation
 
@@ -111,14 +170,10 @@ The main assessment considerations include:
 * **Cross-method comparison:** Comparing selected Fluent results with MATLAB calculations and visualizations.
 * **Physical interpretation:** Relating velocity and pressure distributions to established internal-flow principles.
 
-The reliability of individual results depends on the mesh, boundary conditions, material properties, turbulence treatment where applicable, and the assumptions used in each numerical model.
-
 ## Main Engineering Insights
 
-The three studies demonstrate how internal-flow behavior is influenced by geometric changes and operating conditions.
-
-* Curved passages modify velocity profiles and introduce additional flow structures.
-* Diffusers convert part of the flow's kinetic energy into static pressure, while viscous effects and separation can limit pressure recovery.
+* Curved passages modify velocity profiles and introduce additional flow structures; smaller \(R/D\) increases separation near the inner wall.
+* Diffusers convert part of the flow’s kinetic energy into static pressure, while viscous effects and separation can limit pressure recovery.
 * Variable-area nozzle systems produce substantial spatial changes in velocity and pressure.
 * Thermal and density fields provide additional insight into flows involving temperature variation.
 * Mass conservation and numerical checks are essential when interpreting CFD results.
@@ -126,56 +181,21 @@ The three studies demonstrate how internal-flow behavior is influenced by geomet
 
 ## Repository Structure
 
-The repository can be organized as follows:
-
 ```text
-CFD-Internal-Flow-Analysis/
+ANSYS-Fluent-Internal-Flow-Analysis/
 ├── README.md
 ├── report/
 │   ├── report-en.pdf
 │   └── report-fa.pdf
+├── images/                          # Selected figures used in this README
+│   ├── 01_Elbow_*.jpg
+│   ├── 02_Diffuser_*.jpg
+│   └── 03_Nozzle_*.jpg
 ├── matlab/
 │   ├── elbow/
 │   ├── diffuser/
 │   └── nozzle/
-├── results/
-│   ├── elbow/
-│   ├── diffuser/
-│   └── nozzle/
-└── figures/
-    ├── geometries/
-    ├── velocity-contours/
-    ├── pressure-contours/
-    ├── temperature-contours/
-    └── streamlines/
-```
-
-*The directory names above are a suggested structure. Keep only the folders and files that are actually included in the repository.*
-
-## Limitations
-
-The results should be interpreted in the context of the numerical assumptions, mesh resolution, boundary conditions, and physical models used in each case.
-
-Agreement between two numerical approaches does not necessarily establish experimental accuracy. Likewise, a converged solution or satisfactory mass balance alone does not prove that a solution is mesh-independent.
-
-The complete reproducibility of the analyses depends on the availability of the original geometry, mesh, solver settings, input data, and post-processing scripts.
-
-## Project Report
-
-The accompanying report documents the problem definitions, computational procedures, flow-field visualizations, and engineering interpretations for the three studies.
-
-* **Persian report:** `report/report-fa.pdf`
-* **English report:** `report/report-en.pdf` *(include only if an English version is available)*
-
-## Skills Demonstrated
-
-* Computational Fluid Dynamics (CFD)
-* ANSYS Fluent
-* MATLAB Numerical Post-Processing
-* Internal Flow Analysis
-* Fluid Mechanics
-* Velocity and Pressure Field Interpretation
-* Mesh Quality Assessment
-* Mass Conservation Analysis
-* Scientific Visualization
-* Engineering Report Writing
+└── results/
+    ├── elbow/
+    ├── diffuser/
+    └── nozzle/
