@@ -185,5 +185,5 @@ The accompanying reports document the problem definitions, computational procedu
 
 | Report | Description | File |
 |--------|-------------|------|
-| **English Portfolio Report** | Concise English edition summarizing methods, key results, and conclusions | [`reports/report-en.pdf`](Internal_Flow_CFD_Analysis_English_Report.pdf) |
-| **Persian Course Report** | Full original report (Sharif University of Technology – Fluid Mechanics 1) | [`reports/report-fa.pdf`](Internal_Flow_CFD_Analysis_Farsi_Report.pdf) |
+| **English Portfolio Report** | Concise English edition summarizing methods, key results, and conclusions | [`Internal_Flow_CFD_Analysis_English_Report.pdf`](Internal_Flow_CFD_Analysis_English_Report.pdf) |
+| **Persian Course Report** | Full original report (Sharif University of Technology – Fluid Mechanics 1) | [`Internal_Flow_CFD_Analysis_Farsi_Report.pdf`](Internal_Flow_CFD_Analysis_Farsi_Report.pdf) |
